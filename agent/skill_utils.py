@@ -336,7 +336,7 @@ def get_all_skills_dirs() -> List[Path]:
     # User-created skills directory (separate from bundled)
     from hermes_constants import get_user_skills_dir
     user_dir = get_user_skills_dir()
-    if user_dir.resolve() != dirs[0].resolve() and user_dir.is_dir():
+    if user_dir.resolve() != dirs[0].resolve():
         dirs.append(user_dir)
 
     dirs.extend(get_external_skills_dirs())
